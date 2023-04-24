@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## BANK OF FLATIRON
+## MARTHA MWAU
+This is a simple React application that allows users to manage transactions, including adding new transactions and filtering transactions by description.
+## Core Deliverables
+As a user, I can:
+See a table of all transactions.
+Fill out and submit the form to add a new transaction. This should add the new transaction to the table; the new transaction does not have to be persisted to the backend.
+Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table.
+## Prerequisites
+Node.js (version 12 or higher)
+npm (version 6 or higher)
+## Installation
+1. Clone this repository to your local machine.
+2. In your terminal, navigate to the project directory.
+3. Run the command npm install to install the required dependencies.
+4. Run the command npm start to start the development server.
+5. Open your web browser and navigate to http://localhost:3000 to view the application.
+## Usage
+The application consists of three main components:
+1. Table: displays a table of all transactions.
+2. TForm: allows users to add new transactions.
+3. SearchBar: allows users to filter transactions by description.
+To add a new transaction, fill out the form in the TransactionForm component and click the "Add Transaction" button. The new transaction will be added to the TransactionTable component.
+To filter transactions by description, type into the search bar in the SearchBar component. Only transactions with a description that matches the search term will be displayed in the TransactionTable component.
+## Built With
+React: a JavaScript library for building user interfaces.
+CSS: a stylesheet language used to describe the presentation of HTML documents.
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
