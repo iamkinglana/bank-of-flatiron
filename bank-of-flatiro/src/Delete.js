@@ -3,7 +3,7 @@ import TransactionTable from "./TransactionTable";
 
 function TransactionList({ transactions }) {
   const handleDelete = (id) => {
-    fetch(`/api/transactions/${id}`, {
+    fetch(`http://localhost:3000`, {
       method: 'DELETE',
     })
       .then(() => {

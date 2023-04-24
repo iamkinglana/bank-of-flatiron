@@ -1,47 +1,68 @@
-import React, { useState } from 'react';
-
-function TransactionForm(props) {
-  const [id, setId] = useState('');
-  const [date, setDate] = useState('');
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
-  const [amount, setAmount] = useState('');
-
+import React, { useState } from "react";
+function TransactionForm({ onSubmit },{transactions}) {
+  const [category, setCategory] = useState("");
+  const [description, setDescription] = useState("");
+  const [amount, setAmount] = useState("");
+  const [date, setDate] = useState("");
+  const [ID, setID] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newTransaction = {
-      id: parseInt(id),
-      date: date,
-      description: description,
-      category: category,
-      amount: parseFloat(amount)
+    const newTransaction ={
+      id: ID,
+      date,
+      category,
+      description,
+      amount: Number(amount),
     };
-    props.onAdd(newTransaction);
+    onSubmit(newTransaction);
+    setCategory("");
+    setDescription("");
+    setAmount("");
   };
-
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        ID:
-        <input type="number" value={id} onChange={(e) => setId(e.target.value)} />
-      </label>
-      <label>
-        Date:
-        <input type="text" value={date} onChange={(e) => setDate(e.target.value)} />
-      </label>
-      <label>
-        Description:
-        <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
-      </label>
-      <label>
-        Category:
-        <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
-      </label>
-      <label>
-        Amount:
-        <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
-      </label>
-      <button type="submit">Add Transaction</button>
+    <form onSubmit={handleSubmit} className="TForm">
+      <h2>Add a transaction</h2>
+      <label htmlFor="ID">ID:</label>
+      <input
+        type="id"
+        id="ID"
+        value={ID}
+        onChange={(event) => setID(event.target.value)}
+      />
+      <br />
+      <label htmlFor="date">Date:</label>
+      <input
+        type="date"
+        id="date"
+        value={date}
+        onChange={(event) => setDate(event.target.value)}
+      />
+      <br />
+      <label htmlFor="description">Description:</label>
+      <input
+        type="text"
+        id="description"
+        value={description}
+        onChange={(event) => setDescription(event.target.value)}
+      />
+      <br />
+      <label htmlFor="category">Category:</label>
+      <input
+        type="text"
+        id="category"
+        value={category}
+        onChange={(event) => setCategory(event.target.value)}
+      />
+      <br />
+      <label htmlFor="amount">Amount:</label>
+      <input
+        type="number"
+        id="amount"
+        value={amount}
+        onChange={(event) => setAmount(event.target.value)}
+      />
+      <br />
+      <button type="submit" className= "Submit-btn">Add A Transaction</button>
     </form>
   );
 }

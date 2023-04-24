@@ -3,7 +3,7 @@ import transactions from "./db.json";
 import SearchTransactions from "./Search";
 import TransactionForm from "./TransactionForm";
 import TransactionList from "./Delete";
-import Add from "./Add";
+
 
 function App() {
   
@@ -14,7 +14,7 @@ function App() {
       <SearchTransactions transactions={transactions.transactions} />;
       <TransactionForm transactions={transactions.transactions} />
       <TransactionList transactions={transactions.transactions}/>
-      <Add transactions={transactions.transactions} />
+      
       
 
      

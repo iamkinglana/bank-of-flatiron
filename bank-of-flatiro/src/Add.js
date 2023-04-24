@@ -10,7 +10,7 @@ function Add() {
     };
   
     const handleAddTransaction = (transaction) => {
-      fetch('/api/transactions', {
+      fetch(' http://localhost:3000', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,6 +26,7 @@ function Add() {
         });
       setShowAddForm(false);
     };
+
   
     return (
       <div>

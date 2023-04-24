@@ -17,7 +17,9 @@ function SearchTransactions({ transactions }) {
 
   return (
     <div>
+      
       <input type="text" placeholder="Search transactions" onChange={handleInputChange} />
+      
       
       <table>
         <thead>
