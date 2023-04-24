@@ -1,32 +1,29 @@
-import React, { useState } from 'react';
+import React from "react";
+import TransactionTable from "./TransactionTable";
 
-function App() {
-  const [transactions, setTransactions] = useState([
-    // your JSON data goes here
-  ]);
-
+function TransactionList({ transactions }) {
   const handleDelete = (id) => {
-    const updatedTransactions = transactions.filter((transaction) => {
-      return transaction.id !== id;
-    });
-    setTransactions(updatedTransactions);
+    fetch(`/api/transactions/${id}`, {
+      method: 'DELETE',
+    })
+      .then(() => {
+        // Refresh the transaction list
+      })
+      .catch((error) => {
+        console.error('Error deleting transaction:', error);
+      });
   };
 
   return (
-    <div>
-      <h1>Transactions</h1>
-      <ul>
-        {transactions.map((transaction) => (
-          <li key={transaction.id}>
-            <p>{transaction.description}</p>
-            <p>{transaction.category}</p>
-            <p>{transaction.amount}</p>
-            <button onClick={() => handleDelete(transaction.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {transactions.map((transaction) => (
+        <li key={transaction.id}>
+          <div>{transaction.description}</div>
+          <div>{transaction.amount}</div>
+          <button onClick={() => handleDelete(transaction.id)}>Delete</button>
+        </li>
+      ))}
+    </ul>
   );
 }
-
-export default App;
+export default TransactionList;
