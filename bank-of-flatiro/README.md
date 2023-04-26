@@ -1,5 +1,4 @@
 ## BANK OF FLATIRON
-## MARTHA MWAU
 This is a simple React application that allows users to manage transactions, including adding new transactions and filtering transactions by description.
 ## Core Deliverables
 As a user, I can:
